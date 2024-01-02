@@ -1,5 +1,7 @@
 server:
    port: 9000
+   
+
 
 logging:
   level:
@@ -12,4 +14,12 @@ logging:
 
 spring:
    application:
-      name: auth-server
+    name: auth-server
+   datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+   jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
