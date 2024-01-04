@@ -1,7 +1,16 @@
 server:
    port: 9000
    
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+  instance:
+    hostname: localhost
+    preferIpAddress: false
+    
 
 logging:
   level:
@@ -14,7 +23,7 @@ logging:
 
 spring:
    application:
-    name: auth-server
+    name: auth
    datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
